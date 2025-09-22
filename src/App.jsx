@@ -4,6 +4,7 @@ import WordForm from "./components/WordForm/WordForm";
 import Quiz from "./components/Quiz/Quiz";
 import Result from "./components/Result/Result";
 import AboutModal from "./components/AboutModal/AboutModal";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function App() {
   const [words, setWords] = useState([]);
@@ -49,6 +50,7 @@ function App() {
         </div>
     
       {showAbout && <AboutModal onClose={() => setShowAbout(false)} />}
+          <SpeedInsights />
     </div>
   );
 }
