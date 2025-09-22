@@ -1,0 +1,54 @@
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+
+  // 🔥 Yorqin fon gradiyent
+  background: linear-gradient(135deg, #a5f3fc, #d8b4fe, #f9a8d4);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+
+  font-family: "Segoe UI", sans-serif;
+  color: #111827;
+
+  .app__container {
+    // background: #ffffffcc; // y  arim shaffof oq
+    backdrop-filter: blur(10px); // oynasimon effekt
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+  }
+
+  @media (max-width: 600px) {
+    padding: 12px;
+
+    .app__container {
+      padding: 1.2rem;
+    }
+  }
+}
+
+// 🔮 Fon animatsiya
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+// ✨ Kirish animatsiyasi
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
