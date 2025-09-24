@@ -4,7 +4,6 @@ import WordForm from "./components/WordForm/WordForm.jsx";
 import Quiz from "./components/Quiz/Quiz.jsx";
 import Result from "./components/Result/Result.jsx";
 import AboutModal from "./components/AboutModal/AboutModal.jsx";
-import AdBanner from "./components/GoogleAds/AdsBanner.jsx";
 
 function App() {
   const [words, setWords] = useState([]);
@@ -49,7 +48,6 @@ function App() {
       </div>
 
       {showAbout && <AboutModal onClose={() => setShowAbout(false)} />}
-      <AdBanner />
     </div>
   );
 }
