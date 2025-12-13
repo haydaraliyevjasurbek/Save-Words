@@ -30,7 +30,6 @@ function App() {
     setScore(0);
     setStep("form");
   };
-
   const handleCloseAbout = () => {
     localStorage.setItem("sw_about_seen", "1");
     setShowAbout(false);
@@ -49,15 +48,8 @@ function App() {
           <Result score={score} total={words.length} onRestart={handleRestart} />
         )}
       </div>
-
-<<<<<<< HEAD
       {showAbout && <AboutModal onClose={() => setShowAbout(false)} />}
-=======
       {showAbout && <AboutModal onClose={handleCloseAbout} />}
-
-      {/* Reklama faqat result sahifasida ko‘rsatilsin */}
-      {step === "result" && <AdBanner />}
->>>>>>> c9972d2a7cf0aaf90366e3de49e0e666f74f33c4
     </div>
   );
 }
