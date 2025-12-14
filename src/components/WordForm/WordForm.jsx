@@ -6,7 +6,7 @@ export default function WordForm({ onSubmit }) {
   const [time, setTime] = useState(3);
 
   const handleSubmit = () => {
-    // Bo‘sh joylarni olib tashlab, satrlarni ajratish
+
     const lines = input
       .split("\n")
       .map((line) => line.trim())
@@ -15,13 +15,13 @@ export default function WordForm({ onSubmit }) {
     const list = lines
       .map((line) => {
         const parts = line.split("-").map((p) => p.trim());
-        if (parts.length < 2) return null; // xato formatni rad etish
+        if (parts.length < 2) return null;
         return {
           en: parts[0],
-          uz: parts.slice(1).join("-").replace(/,$/, ""), // ko‘p "-" bo‘lsa qo‘shib olish
+          uz: parts.slice(1).join("-").replace(/,$/, ""), 
         };
       })
-      .filter(Boolean); // nulllarni olib tashlash
+      .filter(Boolean); 
 
     if (list.length === 0) {
       alert("Iltimos, so‘zlarni 'English - Uzbek' formatida kiriting!");
@@ -34,7 +34,6 @@ export default function WordForm({ onSubmit }) {
       return;
     }
 
-    // Hammasi to‘g‘ri bo‘lsa submit qilamiz
     onSubmit(list, parsedTime);
   };
   const example = `

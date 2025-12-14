@@ -11,9 +11,7 @@ body {
   align-items: center;
   min-height: 100vh; 
   padding: 20px;
-  
 
-  // 🔥 Yorqin fon gradiyent
   background: linear-gradient(135deg, #a5f3fc, #d8b4fe, #f9a8d4);
   background-size: 400% 400%;
   animation: gradientBG 12s ease infinite;
@@ -22,8 +20,7 @@ body {
   color: #111827;
 
   .app__container {
-    // background: #ffffffcc; // y  arim shaffof oq
-    backdrop-filter: blur(10px); // oynasimon effekt
+    backdrop-filter: blur(10px); 
     padding: 2rem;
     border-radius: 16px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
@@ -42,14 +39,14 @@ body {
   }
 }
 
-// 🔮 Fon animatsiya
+
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-// ✨ Kirish animatsiyasi
+
 @keyframes fadeIn {
   from {
     opacity: 0;
